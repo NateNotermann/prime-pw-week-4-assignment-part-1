@@ -6,30 +6,109 @@ console.log('***** Function Practice *****')
 
 // 1. Function to return 'Hello World!'
 function hello() {
+  console.log( 'Hello world' ); // added a console.log, 'hello world'.
   return 'Hello World!';
 }
 // Call the function to test
-console.log('Test - should say "Hello World!"', hello());
-
+console.log('Test - should say "Hello World!"', hello()); // this already calls it I believe
+hello();  // I added this extra code to "call" the function 'hello'.
+console.log( '------end of #1------');
 
 // 2. Function to return an personalized hello, using the `name` argument.
 //    for example 'Hello, Jo!', or 'Hello, Stacy!'
+
 function helloName( name ) {
   return;
 }
 // Remember to call the function to test
+//original above
 
+
+//----------------------start of #2 version 1 ---------------------
+function helloName1( name ) {
+  console.log( 'test helloName1. VERSION 1 -->>', name ); //added a console.log, with the variable "name"
+  return;
+  }
+  
+  console.log( helloName1('daleV1') ); /* this does console.log "testing helloName. Name is -->> Dale"
+  --but also console.logs an "undefined" value? not sure why.*/ 
+  //Dont this this verion as much
+  //----------------------end of #2 version 1------------------------
+  
+
+
+//----------------------start of #2 version 2----------------------
+//this version if better I think. Doesn't console.log "undefined". Console.logs cleaner.
+function helloName2( name, test ) {
+  console.log( 'test helloName2. VERSION 2 -->>', name, test ); //added a console.log, with
+  return;
+}
+
+helloName2( 'DaleV2' ); // added this code to CALL "helloName" function, 
+//assigned the string value of "dale" to NAME
+ //----------------------end of #2 version 2------------------------
+//testing both verions again below
+helloName1('bob1', 'test 2'); //version 1 test again 
+helloName2('bob2', 'test 2'); //version 2 test again 
+console.log( '------end of #2------');
+
+
+// just testing randon function below
+function newFriend( name, number ) {
+  console.log( 'my new friends name & number is:', name, number );
+  return;
+}
+newFriend( 'Pete', '123-456-7891' );
+console.log( '------end of random funct. test------');
 
 // 3. Function to add two numbers together & return the result
-function addNumbers( firstNumber ) {
-  // return firstNumber + secondNumber;
-}
+// function addNumbers( firstNumber ) {
+//   // return firstNumber + secondNumber;
+// }
+//---------original above-----------
+
+/*tested this 2 different ways. got the same consol.log answer. I saw the question asks us to do it the second way
+--without using a variable in the function. Just wants us to RETURN the 2 ARGUMENTS when calling the the function*/
+
+////----------------------start of #3 version 1- main Answer----------------------
+function addNumbers( firstNumber, secondNumber ) { //added second ARGUMENT called "secondNumber"
+  // console.log( 'addNumbersAnswer:' );
+  // let addNumbersAnswer = ( firstNumber + secondNumber ); //added a variable add the numbers in function
+  // return addNumbersAnswer; //added returner, to return the variable in the function
+  return ( firstNumber + secondNumber );
+} 
+console.log( 'addNumbersAnswer 2 + 2 =', addNumbers( 2, 2));
+console.log( '------end of #3 V1--main answer------');
+
+
+
+////----------------------start of #3 version 2----------------------
+function addNumbers( firstNumber, secondNumber ) { //added second ARGUMENT called "secondNumber"
+  // console.log( 'addNumbersAnswer:' );
+  let addNumbersAnswer = ( firstNumber + secondNumber ); //added a variable add the numbers in function
+  return addNumbersAnswer; //added returner, to return the variable in the function
+  // return ( firstNumber + secondNumber );
+} 
+console.log( 'addNumbersAnswer 2 + 2 =', addNumbers( 2, 2));
+console.log( '------end of #3 V2------');
+
+
 
 
 // 4. Function to multiply three numbers & return the result
 function multiplyThree( ){
 
 }
+console.log( '-----end of #3------');
+//original code above
+
+
+////----------------------start of #4----------------------
+function multiplyThree( num1, num2, num3 ){  // added 3 ARGUMENTS "num1, num2, num3"
+  return (num1 + num2 + num3 ); // added RETURNER to add THE 3 ARGUMENTS
+}
+console.log( '#4-->> 1 + 1 + 1 =', (1, 1, 1 )); //Console.loged, can called the function while adding number values
+console.log( '-----end of #4------');
 
 
 // 5. Function that will return true if a number is positive, 
