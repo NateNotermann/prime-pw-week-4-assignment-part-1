@@ -99,7 +99,6 @@ console.log( '------end of #3 V2------');
 function multiplyThree( ){
 
 }
-console.log( '-----end of #3------');
 //original code above
 
 
@@ -113,18 +112,42 @@ console.log( '-----end of #4------');
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
+// function isPositive( number ) {
+//   if ( number > 0 ){
+//     return;
+//   }
+//     return;
+// }
+// Call the function to test each outcome (true & false) 
+// Write a separate console.log statement for each outcome
+
+// console.log( 'isPositive - should say true', isPositive(3) );
+// console.log( 'isPositive - should say false', isPositive(0) );
+// console.log( 'isPositive - should say false', isPositive(-3) );
+
+// console.log( '-----orignal #5 code above--');
+//original code above
+
+
 function isPositive( number ) {
   if ( number > 0 ){
-    return;
+    console.log( '# is greater than 0, aka positive');
+    return true; //added true, becaase number is GREATER than 0
   }
-    return;
+  else if( number == 0 ){ //added else if to see if number is equal to 0. if it is return false
+    console.log( '# is equal to 0, aka not positive');
+    return false; //added false
+  }
+  else { //added if neither are true, then console.log false
+    console.log( '# is neither positive or 0, aka negative');
+    return false;
+  }
 }
 // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
 console.log( 'isPositive - should say true', isPositive(3) );
 console.log( 'isPositive - should say false', isPositive(0) );
 console.log( 'isPositive - should say false', isPositive(-3) );
-
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
@@ -166,3 +189,51 @@ function sumAll( ) {
 // 11. Pick a problem from Edabit(https://edabit.com/) or 
 //     CodeWars(https://www.codewars.com/). Then describe it 
 //     here in a comment, write the function, and test it!
+
+
+
+
+
+//training video tests
+
+const seatsInCar = 5;
+let passengers = [];
+let tankFull = false;
+
+function enoughSeats() {
+  console.log('in enoughSeats' );
+  //check if seatsInCar >= number of passangers
+  if ( seatsInCar >= passengers.length ) {
+    return true;
+  }
+  else {
+    return false;  
+  } //end enough seats 
+} // end enoughSeats
+
+function getInCar( nameOfPassenger ) {
+  console.log( 'in getInCar', nameOfPassenger );
+  passengers.push( nameOfPassenger );
+  return passengers;
+}
+
+function readyForRoadTrip() {
+  console.log( 'in readyForRoadTrip' );
+  if( enoughSeats() && tankFull ){
+    return true;
+  } //end all good to go
+  else{
+    return false;
+  }  // not ready to go
+} // end readyForRoadTrip
+
+getInCar( 'you' );
+getInCar( 'me' );
+getInCar( 'Luke Skywalker' );
+getInCar( 'yoda' );
+getInCar( 'Dale' );
+// getInCar( 'Bob' );
+
+// tankFull = true;
+console.log( 'enough seats?', enoughSeats() );
+console.log( 'are we ready for the trip?', readyForRoadTrip() );
