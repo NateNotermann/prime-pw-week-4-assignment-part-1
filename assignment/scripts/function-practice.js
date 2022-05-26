@@ -215,6 +215,19 @@ console.log( '-----end of #6------');
 function find( value, array ){
   
 }
+//original code above----------
+
+
+testArray1=[];
+testArray2=[20, 10, 5, 1,];
+
+function find( value, array ){
+  
+}
+
+
+
+
 
 // ----------------------
 // Stretch Goals
