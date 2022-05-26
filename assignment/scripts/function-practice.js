@@ -161,9 +161,11 @@ function getLast( array ) {
 
 
 // array = []; //added a blank array, don't seem to need this
-
-function getLast2( array ) {
-  console.log( 'in getLast2', array.slice(-1) ); 
+//------------6  VERSION 1------------PARTIALLY WORKS---------
+array1=[1, 4, 10 ];
+array2=[];
+function getLast1( array ) {
+  console.log( 'in getLast-V1', array.slice(-1) ); 
   //let array = []; adding a empty variable array didn't work
   //added the console.log
   /* return; if I do just "return" it does console.log "undefined", not not correctly. 
@@ -176,9 +178,32 @@ function getLast2( array ) {
 //   return undefined;  //I'd trying to use and ELSE to return undefined, but it's not working
 // }
 // cant get it to return undefined. It did initially before I was able to get slice to work..
+console.log( 'console.log getlast-V1', getLast1(array1)); //added console.log
+console.log( 'console.log getlast-V1', getLast1(array2)); //added console.log
+console.log('----END of 6 VERSION 1-----');
+//--------------END of 6 VERSION 1----------------------------------
+
+//--------------START of 6 VERSION 2------------
+array3=[1, 4, 10, 20 ];
+array4=[];
+function getLast2( array ) {
+  console.log( 'in getLast2', array.length ); 
+  //let array = []; adding a empty variable array didn't work
+  //added the console.log
+  /* return; if I do just "return" it does console.log "undefined", not not correctly. 
+  Because it is defined when i call the function below.*/
+  return [array.length -1]; 
+  // i don't know why return array.slice(); doesn't work, but also doesn't give an error - solved
+  //oohh, ok I added "-1" and it works now. I didn't understand what slice was actually doing
+} 
+// else {
+//   return undefined;  //I'd trying to use and ELSE to return undefined, but it's not working
+// }
+// cant get it to return undefined. It did initially before I was able to get slice to work..
+console.log( 'console.log getlast2', getLast2(array3)); //added console.log
+console.log( 'console.log getlast2', getLast2(array4)); //added console.log
 
 
-console.log( 'test getlast2', getLast2([1, 3])); //added console.log
 
 console.log( '-----end of #6------');
 
