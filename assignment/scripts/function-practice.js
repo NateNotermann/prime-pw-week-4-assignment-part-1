@@ -139,7 +139,7 @@ function isPositive( number ) {
     return false; //added false
   }
   else { //added if neither are true, then console.log false
-    console.log( '# is neither positive or 0, aka negative');
+    console.log( '# is not positive or 0, aka negative');
     return false;
   }
 }
@@ -148,12 +148,31 @@ function isPositive( number ) {
 console.log( 'isPositive - should say true', isPositive(3) );
 console.log( 'isPositive - should say false', isPositive(0) );
 console.log( 'isPositive - should say false', isPositive(-3) );
+console.log( '-----end of #5------');
+
+
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
 function getLast( array ) {
 
 }
+//original code above
+
+
+array = [ '1', '2'];
+
+function getLast( array ) {
+  console.log('in getLast'); //added the console.log
+  array.pop();////this is where i STOPPED CHANGED NOT .POP
+
+}
+
+console.log( 'test getlast', getLast( '3' )); //added console.log
+
+console.log( '-----end of #6------');
+
+
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
