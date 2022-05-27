@@ -226,18 +226,29 @@ console.log('----END of 6 VERSION 2-----');
 //original code above----------
 
 
-// testArray1=[];
-// testArray2=[20, 10, 5, 1,];
+//----#7 first attempt - dint work! but figured it out ----
 
-// function find( value, array ){
-//   if (newVar of array )
-  
+console.log('-----7 start-----');
 
+testArray1=[]; //blank array
+testArray2=[20, 10, 5, 1,]; 
 
-  
-// }
+function find( value, array ){ 
+  for (let i=0; i< array.length; i++) {
+    console.log(array[i]);
+    if ( array[i] === value  ){
+      return true
+    } else { 
+        return false
+    }
+  }
+}
+// console.log( find( 5, testArray2 ));
+console.log('test find 25 -false', find(25, testArray2));
+console.log('test find 10 -true',  find(10, testArray2));
 
-// console.log( find( 5, 0 ));
+console.log('----END of 7 --first attempt-----');
+//--------------END of 7--------------------------------
 
 
 
@@ -350,27 +361,31 @@ console.log( 'are we ready for the trip?', readyForRoadTrip() );
 // 7. Function to find a value in an array. 
 // Return true if the value is found, and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
-// function find( value, array ){
-  
-// }
-// // original code above----------
-
-console.log('-----7 start-----');
-
-testArray1=[];
-testArray2=[20, 10, 5, 1,];
-
 function find( value, array ){
-  for (let i=0; i<= array.length; i++) {
-    if ( value === array[i] ){
-      return true;
-    } else { 
-      return false
-    }
-  }
+  
 }
-// console.log( find( 5, testArray2 ));
-console.log('test find', find(25, testArray2), find(10,testArray2) );
+// original code above----------
 
-console.log('----END of 7-----');
-//--------------END of 7--------------------------------
+// console.log('-----7 start-----');
+
+// testArray1=[];
+// testArray2=[20, 10, 5, 1,];
+
+// function find( value, array ){
+//   for (let i=0; i< array.length; i++) {
+//     console.log(array[i]);
+//     if ( array[i] === value  ){
+//       return true
+//     } else { 
+//         return false
+//     }
+//   }
+// }
+// // console.log( find( 5, testArray2 ));
+// console.log('test find 25 -false', find(25, testArray2));
+// console.log('test find 10 -true',  find(10, testArray2));
+
+// console.log('----END of 7-----');
+// //--------------END of 7--------------------------------
+
+
