@@ -161,7 +161,7 @@ function getLast( array ) {
 
 
 // array = []; //added a blank array, don't seem to need this
-//------------6  VERSION 1------------PARTIALLY WORKS---------
+//------------6  VERSION 1------------partially works---------
 array1=[1, 4, 10 ];
 array2=[];
 function getLast1( array ) {
@@ -170,7 +170,8 @@ function getLast1( array ) {
   //added the console.log
   /* return; if I do just "return" it does console.log "undefined", not not correctly. 
   Because it is defined when i call the function below.*/
-  return array.slice(-1); 
+  // return array.slice(-1); //this only returned a black array "[]" not "undefined". Still not sure why.
+  return; //using just return DOES return "undefined" if array is empty.
   // i don't know why return array.slice(); doesn't work, but also doesn't give an error - solved
   //oohh, ok I added "-1" and it works now. I didn't understand what slice was actually doing
 } 
@@ -183,16 +184,16 @@ console.log( 'console.log getlast-V1', getLast1(array2)); //added console.log
 console.log('----END of 6 VERSION 1-----');
 //--------------END of 6 VERSION 1----------------------------------
 
-//--------------START of 6 VERSION 2------------
+//--------------START of 6 VERSION 2---DOES WORK-----
 array3=[1, 4, 10, 20 ];
 array4=[];
 function getLast2( array ) {
-  console.log( 'in getLast2', array.length ); 
+  console.log( 'in getLast2', array[array.length-1]); 
   //let array = []; adding a empty variable array didn't work
   //added the console.log
   /* return; if I do just "return" it does console.log "undefined", not not correctly. 
   Because it is defined when i call the function below.*/
-  return [array.length -1]; 
+  return array[array.length-1]; 
   // i don't know why return array.slice(); doesn't work, but also doesn't give an error - solved
   //oohh, ok I added "-1" and it works now. I didn't understand what slice was actually doing
 } 
@@ -200,13 +201,14 @@ function getLast2( array ) {
 //   return undefined;  //I'd trying to use and ELSE to return undefined, but it's not working
 // }
 // cant get it to return undefined. It did initially before I was able to get slice to work..
-console.log( 'console.log getlast2', getLast2(array3)); //added console.log
-console.log( 'console.log getlast2', getLast2(array4)); //added console.log
+console.log( 'console.log getlast2array3 should be "20"-->', getLast2(array3)); //testing and calling code
+console.log( 'console.log getlast2array4 should be "undefined"-->', getLast2(array4)); //testing and calling code
 
 
 
-console.log( '-----end of #6------');
 
+console.log('----END of 6 VERSION 2-----');
+//--------------END of 6 VERSION 2----------------------------------
 
 
 // 7. Function to find a value in an array. Return true if the 
