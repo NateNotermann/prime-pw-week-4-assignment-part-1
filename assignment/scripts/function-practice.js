@@ -224,9 +224,21 @@ testArray1=[];
 testArray2=[20, 10, 5, 1,];
 
 function find( value, array ){
+  if (newVar of array )
+  
+
+
   
 }
 
+console.log( find( 5, 0 ));
+
+
+
+
+
+console.log('----END of 7-----');
+//--------------END of 7----------------------------------
 
 
 
