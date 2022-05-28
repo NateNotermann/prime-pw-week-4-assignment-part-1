@@ -227,35 +227,74 @@ console.log('----END of 6 VERSION 2-----');
 
 
 //----#7 first attempt - dint work! but figured it out ----
+//-------this is just to show my work and to remember what i did wrong.----
 
-console.log('-----7 start-----');
+console.log('-----START of 7 --first attempt----');
 
 testArray1=[]; //blank array
-testArray2=[20, 10, 5, 1,]; 
+testArray2=[20, 10, 5, 1,]; //test full array
 
-function find( value, array ){ 
-  for (let i=0; i< array.length; i++) {
+function find1( value, array ){  
+  for (let i=0; i< array.length; i++) { 
     console.log(array[i]);
     if ( array[i] === value  ){
-      return true
-    } else { 
-        return false
+      return true  //this works f or returning true..
+    } else {  //this works 
+        return false //this DOES NOT WORK - it returns too early.
+        //because i had return here, it will return false, 
+        //--and then it immediately stops/jumps out of the loop
+        //thus it will not continue going through the rest of the array items. 
+        //this took hours to figure out :p
     }
   }
 }
 // console.log( find( 5, testArray2 ));
-console.log('test find 25 -false', find(25, testArray2));
-console.log('test find 10 -true',  find(10, testArray2));
+console.log('test find 25 -false', find1(25, testArray2));
+console.log('test find 10 -true',  find1(10, testArray2));
 
 console.log('----END of 7 --first attempt-----');
-//--------------END of 7--------------------------------
+//--------------END of 7---first attempt------------------------
 
 
 
 
 
-// console.log('----END of 7-----');
-// //--------------END of 7----------------------------------
+
+
+
+
+
+
+//-------------START of 7 --SECOND ATTEMPT - WORKS!!!-----
+console.log('--START #7 --ATTEMPT-2 --WORKS!--');
+
+// blankArray=[]; //blank array
+{
+const testArray7=[20, 10, 5, 1,]; //test full array
+
+console.log('checking array testArray7. Should be: [20, 10, 5, 1,]', testArray7 );
+function find(value, array) {
+  for (let i = 0; i < array.length; i++) {
+      if (value === array[i]) {
+        console.log('true value found is-->', array[i]);
+          return true
+      } else {
+      }
+  }
+  console.log('true value NOT found :(');
+  return false;
+}
+console.log('#7 Function, find 20 - should return true:', find(20,testArray7));
+console.log('#7 Function, find 10 - should return true:', find(10,testArray7));
+console.log('#7 Function, find 5 - should return true:', find(5,testArray7));
+console.log('#7 Function, find 1 - should return true:', find(1,testArray7));
+console.log('#7 Function, find 0 - should return false:', find(0,testArray7));
+console.log('#7 Function, find 50 - should return false:', find(50,testArray7));
+}
+
+
+console.log('-----END of 7 --ATTEMPT-2--WORKS--');
+// //--------------END of 7----ATTEMPT-2--WORKS------------
 
 
 
@@ -357,13 +396,14 @@ console.log( 'are we ready for the trip?', readyForRoadTrip() );
 
 
 
+//--this is where Avery and i were going through this problem testing things out
 
 // 7. Function to find a value in an array. 
 // Return true if the value is found, and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
-function find( value, array ){
+// function find( value, array ){
   
-}
+// }
 // original code above----------
 
 // console.log('-----7 start-----');

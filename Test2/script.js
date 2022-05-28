@@ -25,7 +25,7 @@ console.log('7. function find(4, arr) - should return false:', find(4, simpleArr
 
 
 //Collins code below:
-
+console.log('collins code below');
 let array7Issues = [ 1 ,2, 3, 4, 5 ];
 console.log(array7Issues, 'check the array')
 
