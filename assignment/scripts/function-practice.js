@@ -238,7 +238,7 @@ function find1( value, array ){
   for (let i=0; i< array.length; i++) { 
     console.log(array[i]);
     if ( array[i] === value  ){
-      return true  //this works f or returning true..
+      return true  //this works for returning true..
     } else {  //this works 
         return false //this DOES NOT WORK - it returns too early.
         //because i had return here, it will return false, 
